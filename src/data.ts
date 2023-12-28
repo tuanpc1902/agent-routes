@@ -9,7 +9,7 @@ const subUserPermission: TSubUserPermission = {
     "/withdrawal": true,
     "/create-downline": true,
     "/downline-listing": true,
-    "/credit-balance": false,
+    "/credit-balance": true,
 };
 
 // true/false is for testing purpose only
@@ -20,7 +20,7 @@ const flagFeature: TFlagFeature = {
     "agent.display.withdrawal": true,
     "agent.display.create.downline": true,
     "agent.display.downline.listing": true,
-    "agent.display.credit.balance": true,
+    "agent.display.credit.balance": false,
 };
 
 export { subUserPermission, flagFeature };

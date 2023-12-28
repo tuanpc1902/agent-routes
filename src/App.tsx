@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, useHistory, useNavigate } from "react-router-dom";
 import NoPermission from "./app/pages/no-permission/no-permission";
 import "./App.css";
 import useBuildRoutesData from "./hooks/useBuildRoutesData";
@@ -9,10 +9,12 @@ import Default from "./app/pages/default";
 
 function App() {
     const routesData = useBuildRoutesData();
-
+    const history = useNavigate();
+    console.log("🚀 ~ file: App.tsx:13 ~ App ~ history:", history)
+    
     return (
-        <BrowserRouter>
-            <HeaderLayout />
+            <>
+                <HeaderLayout />
             <div className="routes">
                 <Suspense fallback={<SpinLoading />}>
                     <Routes>
@@ -31,7 +33,7 @@ function App() {
                     </Routes>
                 </Suspense>
             </div>
-        </BrowserRouter>
+            </>
     );
 }
 

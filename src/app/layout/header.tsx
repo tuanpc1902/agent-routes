@@ -52,7 +52,7 @@ function HeaderLayout() {
                     lineHeight: "40px",
                 }}
                 theme="dark"
-                mode="horizontal"
+                mode="horizontal" 
                 defaultSelectedKeys={[path]}
                 items={items}
             />
